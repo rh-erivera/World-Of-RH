@@ -25,7 +25,7 @@ html {
 
 /* Adding RH Caslon */
 @font-face {   
-  font-family: 'CaslonRH';   
+  font-family: 'CaslonRH-Superfine';   
   src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5c92e6934785d3d76113e4b4/1553131155109/CaslonRH-Superfine.otf);
 }
 
@@ -38,7 +38,10 @@ html {
   font-family: 'CaslonRH-ThinItalic';
   src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5cacc5bef4e1fc0cab9ded26/1554826686439/CaslonRH-ThinItalic.otf);
 }
-
+@font-face {
+  font-family: 'CaslonRH-SuperfineItalic';
+  src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5c92e7e2085229c3cb4af304/1553131490446/CaslonRH-SuperfineItalic.otf);
+}
 @font-face {
   font-family: 'BaronSans-Thin';
   src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5d2f88386d85cd0001d7226c/1563396152073/BaronSans-Thin.otf);

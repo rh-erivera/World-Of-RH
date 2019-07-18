@@ -122,18 +122,31 @@ export default {
   transition: color 750ms ease-in;
   -webkit-transition: color 750ms ease-in;
 }
-/* @keyframes fadeInOut {
-    0% {opacity: 0;}
-    25% {opacity: 1;}
-    75% {opacity: 1;}
-    100% {opacity: 0;}
+
+.list-view-items a {
+    position:relative;
+    transition: 0.5s;
 }
-@-webkit-keyframes fadeInOut {
-    0% {opacity: 0;}
-    25% {opacity: 1;}
-    75% {opacity: 1;}
-    100% {opacity: 0;}
-} */
+
+.list-view-items a::before{
+    width: 0%;
+    height:100%;
+    z-index: 3;
+    content:'';
+    position: absolute;
+    bottom: -1px;
+    box-sizing: border-box;
+    transition: .5s;
+ }
+
+.list-view-items a:hover::before {
+    width: 100% !important;
+    transition: .5s;
+ }
+
+.list-view-items a::before {
+    border-bottom: 1px solid #FFFFFF;
+}
 
 @keyframes fadeIn {
     0% {opacity: 0;}
