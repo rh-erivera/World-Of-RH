@@ -45,7 +45,7 @@ export default {
             for (var i = 0; i < navItems.length; i++) {
                 navItems[i].style.color = '#999999';
             }
-            document.getElementById('logo-img').src = 'theWorldOfRH-Logo-White.svg'
+            document.getElementById('logo-img').src = '/theWorldOfRH-Logo-White.svg'
             document.getElementById('item-1').style.color = 'white';
             this.showBg.style.opacity = 1;
             this.interval = setInterval(this.slideshow, 4000)
