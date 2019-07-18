@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <h1>World of RH Conecpts</h1>
+      <h1>World of RH Concepts</h1>
       <a href="/design1">Design 1</a>
       <a href="/design2">Design 2</a>
       <a href="/design3">Design 3</a>
@@ -11,8 +11,6 @@
     </div>
   </div>
 </template>
-
-
 
 <style>
 
