@@ -81,7 +81,11 @@ export default {
         startSlideImage(i) {
             document.getElementById('item-'+i).style.color = '#D5D5D5';
             this.showItemElement.style.color = 'black'
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+            if (this.i == 1) {
+                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i)+'.jpg\')';
+            } else {
+                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+            }
             this.interval = setInterval(this.slideshow, 4000)
         }
   }

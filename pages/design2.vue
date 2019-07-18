@@ -57,7 +57,11 @@ export default {
             this.showBg.style.backgroundImage = 'url(\'/bg-'+i+'.jpg\')';
         },
         startSlideImage(i) {
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+            if (this.i == 1) {
+                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i)+'.jpg\')';
+            } else { 
+                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+            }
             this.interval = setInterval(this.slideshow, 4000)
         }
   }
