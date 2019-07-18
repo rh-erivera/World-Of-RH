@@ -37,11 +37,14 @@ export default {
         }
     },
     mounted() {
-        setTimeout(function() {
+        this.hideItemElement = document.getElementById('item-1')
+        this.showItemElement = document.getElementById('item-1')
+        this.showBg = document.getElementById('bg')
+        setTimeout(()=> {
             document.getElementById('logo').style.opacity = 1
             document.getElementById('logo').style.top = '12.5%'
         }, 10000)
-        setTimeout(function() {
+        setTimeout(()=> {
             document.getElementById('nav').style.opacity = 1
         }, 11000)
         this.startSlideShowInterval = setInterval(this.startSlideShow, 11000)
@@ -49,7 +52,6 @@ export default {
     methods: {
         startSlideShow() {
             clearInterval(this.startSlideShowInterval)
-            this.showBg = document.getElementById('bg')
             this.showBg.style.opacity = 1;
             this.interval = setInterval(this.slideshow, 4000)
         },
@@ -74,12 +76,12 @@ export default {
             clearInterval(this.interval)
             this.showItemElement.style.color = '#D5D5D5'
             document.getElementById('item-'+i).style.color = 'black';
-            this.showBg.style.backgroundImage = 'url(\'bg-'+i+'.jpg\')';
+            this.showBg.style.backgroundImage = 'url(\'/bg-'+i+'.jpg\')';
         },
         startSlideImage(i) {
             document.getElementById('item-'+i).style.color = '#D5D5D5';
             this.showItemElement.style.color = 'black'
-            this.showBg.style.backgroundImage = 'url(\'bg-'+(this.i-1)+'.jpg\')';
+            this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
             this.interval = setInterval(this.slideshow, 4000)
         }
   }
