@@ -35,6 +35,11 @@ html {
 }
 
 @font-face {
+  font-family: 'CaslonRH-ThinItalic';
+  src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5cacc5bef4e1fc0cab9ded26/1554826686439/CaslonRH-ThinItalic.otf);
+}
+
+@font-face {
   font-family: 'BaronSans-Thin';
   src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5d2f88386d85cd0001d7226c/1563396152073/BaronSans-Thin.otf);
 }
