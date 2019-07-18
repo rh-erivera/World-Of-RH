@@ -63,7 +63,7 @@ export default {
                 this.hideItemElement = document.getElementById('item-'+(this.i-1))
                 this.showItemElement = document.getElementById('item-'+(this.i))
             }
-            this.showBg.style.backgroundImage = 'url(\'bg-'+this.i+'.jpg\')';
+            this.showBg.style.backgroundImage = 'url(\'/bg-'+this.i+'.jpg\')';
             this.hideItemElement.style.color = '#D5D5D5'
             this.showItemElement.style.color = 'black'
             if (this.i == 9) {
@@ -142,13 +142,6 @@ export default {
     flex-direction: column;
     padding-bottom: 50px;
     z-index: 1;
-    /* position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: 45%;
-    max-width: 950px;
-    text-align: center; */
 }
 .nav a {
     font-family: 'BaronSans-UltraThin', sans-serif;
