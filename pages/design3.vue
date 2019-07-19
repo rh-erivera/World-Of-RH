@@ -58,7 +58,7 @@ export default {
                 this.hideItemElement = document.getElementById('item-'+(this.i-1))
                 this.showItemElement = document.getElementById('item-'+(this.i))
             }
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+this.i+'.jpg\')';
+            this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+this.i+'.jpg\')';
             this.hideItemElement.style.color = '#999999'
             this.showItemElement.style.color = 'white'
             if (this.i == 9) {
@@ -71,15 +71,15 @@ export default {
             clearInterval(this.interval)
             this.showItemElement.style.color = '#999999'
             document.getElementById('item-'+i).style.color = 'white';
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+i+'.jpg\')';
+            this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+i+'.jpg\')';
         },
         startSlideImage(i) {
             document.getElementById('item-'+i).style.color = '#999999';
             this.showItemElement.style.color = 'white'
             if (this.i == 1) {
-                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i)+'.jpg\')';
+                this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+(this.i)+'.jpg\')';
             } else { 
-                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+                this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+(this.i-1)+'.jpg\')';
             }
             this.interval = setInterval(this.slideshow, 4000)
         }
@@ -89,7 +89,7 @@ export default {
 
 <style>
 .container-design3 {
-    height: 100vh;
+    height: 665px;
     display: flex;
 }
 #logo {
@@ -113,22 +113,41 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    height: 100vh;
     overflow-y: hidden;
 }
-.nav a {
-    /* font-family: 'CaslonRH-ThinItalic', sans-serif;
-    font-size: 36pt;
-    line-height: 36pt; */
+
+/* .list-view-items a {
+    position:relative;
+    transition: 0.5s;
 }
+
+.list-view-items a::before{
+    width: 0%;
+    height:100%;
+    z-index: 3;
+    content:'';
+    position: absolute;
+    bottom: -1px;
+    box-sizing: border-box;
+    transition: .5s;
+ }
+
+.list-view-items a:hover::before {
+    width: 100% !important;
+    transition: .5s;
+ }
+
+.list-view-items a::before {
+    border-bottom: 1px solid white;
+} */
 
 .nav-background-images {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
-    background-image: url('/bg-1.jpg');
+    height: 100%;
+    background-image: url('/design2/02_bg_1.jpg');
     opacity: 0;
     background-position: center;
     background-size: cover;
