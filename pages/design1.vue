@@ -93,7 +93,7 @@ export default {
 
 <style>
 .container {
-    height: 100%;
+    height: 665px;
     margin: 0 auto;
     max-width: 1490px;
     display: flex;
