@@ -99,6 +99,7 @@ export default {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    overflow-y: hidden;
 }
 .quote {
     animation: fadeInOut 10s ease-in-out;
