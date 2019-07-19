@@ -143,6 +143,7 @@ export default {
 
 .nav-background-images {
     position: absolute;
+    z-index: 0;
     top: 0;
     left: 0;
     width: 100vw;
