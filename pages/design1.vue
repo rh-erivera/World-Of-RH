@@ -93,7 +93,7 @@ export default {
 
 <style>
 .container {
-    height: 90vh;
+    /* height: 90vh; */
     margin: 0 auto;
     max-width: 1490px;
     display: flex;
@@ -182,7 +182,7 @@ export default {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url('/design1/01_bg_1.jpg');
     opacity: 0;
     background-position: center;
