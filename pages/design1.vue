@@ -33,10 +33,40 @@ export default {
             showItemElement: {},
             showBg: {},
             startSlideShowInterval: {},
-            interval: null
+            interval: null,
+            img1: {},
+            img2: {},
+            img3: {},
+            img4: {},
+            img5: {},
+            img6: {},
+            img7: {},
+            img8: {},
+            img9: {},
         }
     },
     mounted() {
+
+        this.img1 = new Image();
+        this.img2 = new Image();
+        this.img3 = new Image();
+        this.img4 = new Image();
+        this.img5 = new Image();
+        this.img6 = new Image();
+        this.img7 = new Image();
+        this.img8 = new Image();
+        this.img9 = new Image();
+
+        this.img1.src = 'bg-1.jpg'
+        this.img2.src = 'bg-2.jpg'
+        this.img3.src = 'bg-3.jpg'
+        this.img4.src = 'bg-4.jpg'
+        this.img5.src = 'bg-5.jpg'
+        this.img6.src = 'bg-6.jpg'
+        this.img7.src = 'bg-7.jpg'
+        this.img8.src = 'bg-8.jpg'
+        this.img9.src = 'bg-9.jpg'
+
         this.hideItemElement = document.getElementById('item-1')
         this.showItemElement = document.getElementById('item-1')
         this.showBg = document.getElementById('bg')
@@ -110,7 +140,7 @@ export default {
 }
 .RH-Caslon {
     color: #333333;
-    font-family: 'CaslonRH', sans-serif;
+    font-family: 'CaslonRH-Superfine', sans-serif;
     font-size: 55pt;
     line-height: 45pt;
     letter-spacing: .02em;
