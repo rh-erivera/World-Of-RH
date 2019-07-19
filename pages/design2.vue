@@ -70,7 +70,7 @@ export default {
 
 <style>
 .container {
-    height: 100vh;
+    height: 665px;
     margin: 0 auto;
     max-width: 1552px;
     display: flex;
@@ -88,12 +88,12 @@ export default {
 
 .nav {
     animation: fadeIn 2s ease-in;
-    padding-top: 150px;
+    padding: 60px 11.5% 0;
     z-index: 1;
     font-family: 'BaronSans-UltraThin', sans-serif;
     text-transform: uppercase;
-    font-size: 1em;
-    line-height: 18.24pt;
+    font-size: 12pt;
+    line-height: 18pt;
     letter-spacing: .02em;
     text-align: justify;
     text-align-last: center;
@@ -101,8 +101,8 @@ export default {
 }
 .nav a {
     font-family: 'CaslonRH-ThinItalic', sans-serif;
-    font-size: 23.24pt;
-    line-height: 14.24pt;
+    font-size: 18pt;
+    line-height: 18pt;
 }
 
 .nav-background-images {
@@ -110,7 +110,7 @@ export default {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-image: url('/bg-1.jpg');
     opacity: 0;
     background-position: center;
@@ -146,11 +146,6 @@ export default {
 
 .list-view-items a::before {
     border-bottom: 1px solid #FFFFFF;
-}
-
-html {
-    font-size: 24pt;
-    /* line-height: 36pt; */
 }
 
 @media (min-width: 1025px){
