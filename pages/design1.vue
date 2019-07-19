@@ -10,7 +10,7 @@
                 <img id="logo" src="/theWorldOfRH-Logo.svg" alt="">
             </div>
             <div class="nav list-view-items" id="nav">
-                <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black; border-bottom: 1px #ccc solid">collections</a>
+                <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black; border-bottom: transparent;">collections</a>
                 <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">sourcebooks</a>
                 <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">design services</a>
                 <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">galleries</a>
@@ -52,6 +52,7 @@ export default {
         startSlideShow() {
             clearInterval(this.startSlideShowInterval)
             this.showBg.style.opacity = 1;
+            this.showItemElement.style.borderBottom = '1px solid #ccc'
             this.interval = setInterval(this.slideshow, 4000)
         },
         slideshow() {
