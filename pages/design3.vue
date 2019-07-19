@@ -107,7 +107,7 @@ export default {
     font-family: 'CaslonRH-Superfine', sans-serif;
     text-transform: uppercase;
     font-size: 74.64pt;
-    line-height: 54.92pt;
+    line-height: 55.4pt;
     letter-spacing: -.02em;
     color: #333;
     display: flex;
@@ -115,7 +115,6 @@ export default {
     margin-left: auto;
     height: 100vh;
     overflow-y: hidden;
-    margin-top: -3px;
 }
 .nav a {
     /* font-family: 'CaslonRH-ThinItalic', sans-serif;
