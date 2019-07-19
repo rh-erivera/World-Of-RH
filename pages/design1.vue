@@ -10,7 +10,7 @@
                 <img id="logo" src="/theWorldOfRH-Logo.svg" alt="">
             </div>
             <div class="nav list-view-items" id="nav">
-                <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">collections</a>
+                <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black; border-bottom: 1px #ccc solid">collections</a>
                 <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">sourcebooks</a>
                 <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">design services</a>
                 <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">galleries</a>
@@ -42,12 +42,11 @@ export default {
         this.showBg = document.getElementById('bg')
         setTimeout(()=> {
             document.getElementById('logo').style.opacity = 1
-            document.getElementById('logo').style.top = '12.5%'
         }, 10000)
         setTimeout(()=> {
             document.getElementById('nav').style.opacity = 1
         }, 11000)
-        this.startSlideShowInterval = setInterval(this.startSlideShow, 11000)
+        this.startSlideShowInterval = setInterval(this.startSlideShow, 15000)
     },
     methods: {
         startSlideShow() {
@@ -63,9 +62,9 @@ export default {
                 this.hideItemElement = document.getElementById('item-'+(this.i-1))
                 this.showItemElement = document.getElementById('item-'+(this.i))
             }
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+this.i+'.jpg\')';
-            this.hideItemElement.style.color = '#D5D5D5'
-            this.showItemElement.style.color = 'black'
+            this.showBg.style.backgroundImage = 'url(\'/design1/01_bg_'+this.i+'.jpg\')';
+            this.hideItemElement.style.borderBottom = 'transparent'
+            this.showItemElement.style.borderBottom = '1px solid #ccc'
             if (this.i == 9) {
                 this.i = 1
             } else {
@@ -74,17 +73,17 @@ export default {
         },
         stopSlideImage(i) {
             clearInterval(this.interval)
-            this.showItemElement.style.color = '#D5D5D5'
-            document.getElementById('item-'+i).style.color = 'black';
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+i+'.jpg\')';
+            this.showItemElement.style.borderBottom = 'transparent'
+            document.getElementById('item-'+i).style.borderBottom = '1px solid #ccc';
+            this.showBg.style.backgroundImage = 'url(\'/design1/01_bg_'+i+'.jpg\')';
         },
         startSlideImage(i) {
-            document.getElementById('item-'+i).style.color = '#D5D5D5';
-            this.showItemElement.style.color = 'black'
+            document.getElementById('item-'+i).style.borderBottom = 'transparent';
+            this.showItemElement.style.borderBottom = '1px solid #ccc'
             if (this.i == 1) {
-                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i)+'.jpg\')';
+                this.showBg.style.backgroundImage = 'url(\'/design1/01_bg_'+(this.i)+'.jpg\')';
             } else {
-                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+                this.showBg.style.backgroundImage = 'url(\'/design1/01_bg_'+(this.i-1)+'.jpg\')';
             }
             this.interval = setInterval(this.slideshow, 4000)
         }
@@ -106,13 +105,14 @@ export default {
     opacity: 0;
     position: absolute;
     max-width: 1490px;
-    bottom: 30%;
+    bottom: 38%;
+    padding: 0 12%;
 }
 .RH-Caslon {
     color: #333333;
     font-family: 'CaslonRH-Superfine', sans-serif;
-    font-size: 55pt;
-    line-height: 45pt;
+    font-size: 28pt;
+    line-height: 23pt;
     letter-spacing: .02em;
     text-transform: uppercase;
     text-align: center;
@@ -120,49 +120,46 @@ export default {
 .Baron-Sans {
     color: #333333;
     font-family: 'BaronSans-Thin', sans-serif;
-    font-size: 20pt;
-    line-height: 45pt;
+    font-size: 10pt;
+    line-height: 23pt;
     letter-spacing: .05em;
     text-transform: uppercase;
     text-align: right;
     padding: 10px 0 0 0;
 }
 #logo {
-    /* animation: logo 20s ease-in; */
     transition: opacity 1.75s ease-out, top 300ms ease-out;
     opacity: 0;
     position: absolute;
     left: 0;
     right: 0;
     margin: 0 auto;
-    top: 15%;
-    max-width: 100px;
+    top: 13.5%;
+    width: 75px;
 }
 
 .nav {
     transition: opacity 2s ease-in;
     opacity: 0;
-    /* display: flex;
-    flex-direction: column; */
     text-align: center;
-    width: 275px;
-    padding-bottom: 50px;
+    width: 150px;
+    padding-bottom: 11%;
     z-index: 1;
 }
 .nav a {
-    font-family: 'BaronSans-UltraThin', sans-serif;
-    font-size: 20pt;
-    line-height: 48pt;
-    letter-spacing: .15em;
+    font-family: 'BaronSans-Thin', sans-serif;
+    font-size: 10pt;
+    line-height: 24pt;
+    letter-spacing: .2em;
     text-transform: uppercase;
     text-align: center;
-    color: #D5D5D5;
-
+    color: black;
     position:relative;
     transition: 0.5s;
+    border-bottom: transparent;
 }
 
-.nav a::before{
+/* .nav a::before{
     width: 0%;
     height:100%;
     z-index: 3;
@@ -178,7 +175,7 @@ export default {
  }
 .nav a::before {
     border-bottom: 1px solid black;
-}
+} */
 
 .nav-background-images {
     position: absolute;
@@ -186,7 +183,7 @@ export default {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('/bg-1.jpg');
+    background-image: url('/design1/01_bg_1.jpg');
     opacity: 0;
     background-position: center;
     background-size: cover;
@@ -194,8 +191,26 @@ export default {
     -webkit-transition: background-image 750ms ease-in, opacity 750ms ease-in;
 }
 .list-view-items a {
-  transition: color 750ms ease-in;
-  -webkit-transition: color 750ms ease-in;
+  transition: color 750ms ease-in, border-bottom 750ms ease-in;
+  -webkit-transition: color 750ms ease-in, border-bottom 750ms ease-in;
+}
+
+@media (min-width: 1025px) {
+    .RH-Caslon {
+        font-size: 55pt;
+        line-height: 45pt;    
+    }
+    .Baron-Sans {
+        font-size: 20pt;
+        line-height: 45pt;
+    }
+    .nav {
+        width: 275px;
+    }
+    .nav a {
+        font-size: 20pt;
+        line-height: 48pt;
+    }
 }
 
 @keyframes fadeInOut {

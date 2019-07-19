@@ -52,4 +52,8 @@ html {
   src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5d2f88c60f15f80001e4ce5f/1563396294463/BaronSans-UltraThin.otf);
 }
 
+@font-face {
+  font-family: 'BaronSans-Roman';
+  src: url(https://static1.squarespace.com/static/5c01b80fda02bca8e44e3131/t/5d323044f318bf0001cfc16c/1563570244341/BaronSans-Roman.otf);
+}
 </style>
