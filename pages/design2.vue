@@ -92,8 +92,8 @@ export default {
     z-index: 1;
     font-family: 'BaronSans-UltraThin', sans-serif;
     text-transform: uppercase;
-    font-size: 15.5pt;
-    line-height: 25.02pt;
+    font-size: 12.16pt;
+    line-height: 18.24pt;
     letter-spacing: .02em;
     text-align: justify;
     text-align-last: center;
@@ -101,8 +101,8 @@ export default {
 }
 .nav a {
     font-family: 'CaslonRH-ThinItalic', sans-serif;
-    font-size: 25.02pt;
-    line-height: 25.02pt;
+    font-size: 23.24pt;
+    line-height: 14.24pt;
 }
 
 .nav-background-images {
