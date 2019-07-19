@@ -160,7 +160,7 @@ export default {
     border-bottom: transparent;
 }
 
-/* .nav a::before{
+.nav a::before{
     width: 0%;
     height:100%;
     z-index: 3;
@@ -175,8 +175,8 @@ export default {
     transition: .5s;
  }
 .nav a::before {
-    border-bottom: 1px solid black;
-} */
+    border-bottom: 1px solid #ccc;
+}
 
 .nav-background-images {
     position: absolute;
@@ -188,6 +188,7 @@ export default {
     opacity: 0;
     background-position: center;
     background-size: cover;
+    overflow-y: hidden;
     transition: background-image 750ms ease-in, opacity 750ms ease-in;
     -webkit-transition: background-image 750ms ease-in, opacity 750ms ease-in;
 }
