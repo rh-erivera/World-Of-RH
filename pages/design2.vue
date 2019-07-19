@@ -92,8 +92,8 @@ export default {
     z-index: 1;
     font-family: 'BaronSans-UltraThin', sans-serif;
     text-transform: uppercase;
-    font-size: 24pt;
-    line-height: 36pt;
+    font-size: 15.5pt;
+    line-height: 25.02pt;
     letter-spacing: .02em;
     text-align: justify;
     text-align-last: center;
@@ -101,8 +101,8 @@ export default {
 }
 .nav a {
     font-family: 'CaslonRH-ThinItalic', sans-serif;
-    font-size: 36pt;
-    line-height: 36pt;
+    font-size: 25.02pt;
+    line-height: 25.02pt;
 }
 
 .nav-background-images {
@@ -147,6 +147,17 @@ export default {
 .list-view-items a::before {
     border-bottom: 1px solid #FFFFFF;
 }
+
+@media (min-width: 1025px){
+    .nav {
+        font-size: 24pt;
+        line-height: 36pt;
+    }
+    .nav a {
+        font-size: 36pt;
+        line-height: 36pt;
+    }
+};
 
 @keyframes fadeIn {
     0% {opacity: 0;}
