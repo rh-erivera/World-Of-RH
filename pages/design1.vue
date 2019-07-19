@@ -18,7 +18,7 @@
                 <a href="" id="item-6" @mouseover="stopSlideImage(6)" @mouseleave="startSlideImage(6)">residences</a>
                 <a href="" id="item-7" @mouseover="stopSlideImage(7)" @mouseleave="startSlideImage(7)">guesthouses</a>
                 <a href="" id="item-8" @mouseover="stopSlideImage(8)" @mouseleave="startSlideImage(8)">planes</a><br>
-                <a href="" id="item-9" @mouseover="stopSlideImage(9)" @mouseleave="startSlideImage(9)"> yachts</a>
+                <a href="" id="item-9" @mouseover="stopSlideImage(9)" @mouseleave="startSlideImage(9)">yachts</a>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@ export default {
     /* display: flex;
     flex-direction: column; */
     text-align: center;
-    width: 271px;
+    width: 275px;
     padding-bottom: 50px;
     z-index: 1;
 }
