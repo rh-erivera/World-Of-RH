@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="overflow-y-hidden" >
         <div class="nav-background-images" id="bg"></div>
         <div class="container">
             <div class="quote">
