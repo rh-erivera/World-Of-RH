@@ -92,7 +92,7 @@ export default {
     z-index: 1;
     font-family: 'BaronSans-UltraThin', sans-serif;
     text-transform: uppercase;
-    font-size: 12.16pt;
+    font-size: 1em;
     line-height: 18.24pt;
     letter-spacing: .02em;
     text-align: justify;
@@ -146,6 +146,11 @@ export default {
 
 .list-view-items a::before {
     border-bottom: 1px solid #FFFFFF;
+}
+
+html {
+    font-size: 24pt;
+    /* line-height: 36pt; */
 }
 
 @media (min-width: 1025px){

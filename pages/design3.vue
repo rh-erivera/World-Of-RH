@@ -103,18 +103,19 @@ export default {
 .nav {
     animation: fadeIn 2s ease-in;
     z-index: 1;
-    width: 71%;
+    width: 80%;
     font-family: 'CaslonRH-Superfine', sans-serif;
     text-transform: uppercase;
-    font-size: 123.64pt;
-    line-height: 89.92pt;
+    font-size: 74.64pt;
+    line-height: 54.92pt;
     letter-spacing: -.02em;
     color: #333;
     display: flex;
     flex-direction: column;
     margin-left: auto;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: hidden;
+    margin-top: -3px;
 }
 .nav a {
     /* font-family: 'CaslonRH-ThinItalic', sans-serif;
@@ -139,7 +140,12 @@ export default {
   transition: color 750ms ease-in;
   -webkit-transition: color 750ms ease-in;
 }
-
+@media (min-width: 1025px) {
+    .nav {
+        font-size: 123.64pt;
+        line-height: 89.92pt;
+    }
+}
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
