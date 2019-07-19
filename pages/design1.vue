@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow-y-hidden" >
+    <div>
         <div class="nav-background-images" id="bg"></div>
         <div class="container">
             <div class="quote">
@@ -93,13 +93,12 @@ export default {
 
 <style>
 .container {
-    height: 100vh;
+    height: 90vh;
     margin: 0 auto;
     max-width: 1490px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    overflow-y: hidden;
 }
 .quote {
     animation: fadeInOut 10s ease-in-out;
@@ -188,7 +187,6 @@ export default {
     opacity: 0;
     background-position: center;
     background-size: cover;
-    overflow-y: hidden;
     transition: background-image 750ms ease-in, opacity 750ms ease-in;
     -webkit-transition: background-image 750ms ease-in, opacity 750ms ease-in;
 }
