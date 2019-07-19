@@ -45,7 +45,7 @@ export default {
             this.interval = setInterval(this.slideshow, 4000)
         },
         slideshow() {
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+this.i+'.jpg\')';
+            this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+this.i+'.jpg\')';
             if (this.i == 9) {
                 this.i = 1
             } else {
@@ -54,13 +54,13 @@ export default {
         },
         stopSlideImage(i) {
             clearInterval(this.interval)
-            this.showBg.style.backgroundImage = 'url(\'/bg-'+i+'.jpg\')';
+            this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+i+'.jpg\')';
         },
         startSlideImage(i) {
             if (this.i == 1) {
-                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i)+'.jpg\')';
+                this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+(this.i)+'.jpg\')';
             } else { 
-                this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+                this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+(this.i-1)+'.jpg\')';
             }
             this.interval = setInterval(this.slideshow, 4000)
         }
@@ -111,7 +111,7 @@ export default {
     left: 0;
     width: 100vw;
     height: 100%;
-    background-image: url('/bg-1.jpg');
+    background-image: url('/design2/02_bg_1.jpg');
     opacity: 0;
     background-position: center;
     background-size: cover;

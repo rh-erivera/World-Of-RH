@@ -22,6 +22,16 @@ export default {
       { rel: 'preload', href: '/design1/01_bg_7.jpg', as: 'image'},
       { rel: 'preload', href: '/design1/01_bg_8.jpg', as: 'image'},
       { rel: 'preload', href: '/design1/01_bg_9.jpg', as: 'image'},
+
+      { rel: 'preload', href: '/design2/02_bg_1.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_2.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_3.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_4.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_5.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_6.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_7.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_8.jpg', as: 'image'},
+      { rel: 'preload', href: '/design2/02_bg_9.jpg', as: 'image'},
     ]
   },
   /*
