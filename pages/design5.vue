@@ -132,7 +132,6 @@ export default {
     position:relative;
     transition: 0.5s;
 }
-
 .links  a::before{
     width: 0%;
     height:100%;
@@ -143,12 +142,10 @@ export default {
     box-sizing: border-box;
     transition: .5s;
  }
-
 .links a:hover::before {
     width: 100% !important;
     transition: .5s;
  }
-
 .links a::before {
     border-bottom: 1px solid black;
 }
