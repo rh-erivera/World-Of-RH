@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="nav-background-images" id="bg"></div>
-        <div class="container-design3">
+        <div class="container">
             <div id="logo">
                 <img id="logo-img" src="/theWorldOfRH-Logo.svg" alt="">
             </div>
@@ -88,9 +88,10 @@ export default {
 </script>
 
 <style>
-.container-design3 {
+.container {
     height: 665px;
     display: flex;
+    overflow-y: hidden;
 }
 #logo {
     z-index: 1;
@@ -113,7 +114,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 /* .list-view-items a {
