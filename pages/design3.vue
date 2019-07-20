@@ -4,6 +4,7 @@
         <div class="container">
             <div id="logo">
                 <img id="logo-img" src="/theWorldOfRH-Logo.svg" alt="">
+                <img id="logo-img-white" src="/theWorldOfRH-Logo-White.svg" alt="" style="opacity: 0">
             </div>
             <div class="nav list-view-items">
                 <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)">collections</a>
@@ -45,8 +46,9 @@ export default {
             for (var i = 0; i < navItems.length; i++) {
                 navItems[i].style.color = '#999999';
             }
-            document.getElementById('logo-img').src = '/theWorldOfRH-Logo-White.svg'
+            document.getElementById('logo-img').style.opacity = 0
             document.getElementById('item-1').style.color = 'white';
+            document.getElementById('logo-img-white').style.opacity = 1
             this.showBg.style.opacity = 1;
             this.interval = setInterval(this.slideshow, 4000)
         },
@@ -96,9 +98,10 @@ export default {
 #logo {
     z-index: 1;
     animation: fadeIn 2s ease-in;
-    max-width: 100px;
+    width: 100px;
     display: flex;
     margin-left: 50px;
+    transition: opacity 750ms ease-in;
 }
 
 .nav {
@@ -116,7 +119,12 @@ export default {
     margin-left: auto;
     /* overflow-y: hidden; */
 }
-
+#logo-img-white {
+    position: absolute;
+    width: 100px;
+    top: 42.5%;
+    transition: opacity 750ms ease-in;
+}
 /* .list-view-items a {
     position:relative;
     transition: 0.5s;
