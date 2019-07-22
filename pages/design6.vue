@@ -174,7 +174,7 @@ export default {
   position: absolute;
   height: 100%;
   right: 0;
-  width: 66vw;
+  width: 66.75vw;
 }
 
 .image-view > div {
