@@ -32,6 +32,22 @@ export default {
       { rel: 'preload', href: '/design2/02_bg_7.jpg', as: 'image'},
       { rel: 'preload', href: '/design2/02_bg_8.jpg', as: 'image'},
       { rel: 'preload', href: '/design2/02_bg_9.jpg', as: 'image'},
+
+      { rel: 'preload', href: '/design4/04_bg_1.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_2.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_3.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_4.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_5.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_6.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_7.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_8.jpg', as: 'image'},
+      { rel: 'preload', href: '/design4/04_bg_9.jpg', as: 'image'},
+
+      { rel: 'preload', href: '/RH-Logo-Black.svg', as: 'image'},
+      { rel: 'preload', href: '/RH-Logo-Grey.svg', as: 'image'},
+      { rel: 'preload', href: '/RH-logo.svg', as: 'image'},
+      { rel: 'preload', href: '/theWorldOfRH-Logo-White.svg', as: 'image'},
+      { rel: 'preload', href: '/theWorldOfRH-Logo.svg', as: 'image'},
     ]
   },
   /*

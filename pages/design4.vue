@@ -54,7 +54,7 @@ export default {
         this.hideItemElement = document.getElementById('item-'+(this.i-1))
         this.showItemElement = document.getElementById('item-'+(this.i))
       }
-      this.showBg.style.backgroundImage = 'url(\'/bg-'+this.i+'.jpg\')';
+      this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+this.i+'.jpg\')';
       this.hideItemElement.style.color = '#D5D5D5'
       this.showItemElement.style.color = 'black'
       if (this.i == 9) {
@@ -67,16 +67,16 @@ export default {
     stopSlideImage(i) {
       clearInterval(this.interval)
       this.showItemElement.style.color = '#D5D5D5'
-      this.showBg.style.backgroundImage = 'url(\'/bg-'+i+'.jpg\')'
+      this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+i+'.jpg\')'
       document.getElementById('item-'+i).style.color = 'black';
     },
     startSlideImage(i) {
       document.getElementById('item-'+i).style.color = '#D5D5D5'
       this.showItemElement.style.color = 'black'
       if (this.i == 1) {
-        this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i)+'.jpg\')';
+        this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+(this.i)+'.jpg\')';
       } else {
-        this.showBg.style.backgroundImage = 'url(\'/bg-'+(this.i-1)+'.jpg\')';
+        this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+(this.i-1)+'.jpg\')';
       }
       this.interval = setInterval(this.slideshow, 4000)
     }
@@ -142,7 +142,7 @@ export default {
   -webkit-transition: opacity 1.25s ease-in, background-image 1.25s ease-in;
 }
 #bg {
-    background-image: url('/bg-1.jpg');
+    background-image: url('/design4/04_bg_1.jpg');
     opacity: 0;
     background-position: center;
     background-size: cover;
