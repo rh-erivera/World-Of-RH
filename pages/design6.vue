@@ -1,24 +1,54 @@
 <template>
   <div class="container">
-    <div class="quote">
+    <div class="col-1">
+      <div class="quote">
         <img id="logo" src="/RH-Logo-Black.svg" alt="">
-        <p class="">“Rather than looking to the past, we believe in destroying today’s reality to create tomorrow’s future. Only by taking risks can we explore our unlimited potential.”</p>
+        <p class="quote-copy" >“this is not just a business that sells furniture.<br> it's a platform to change<br> the world.”</p>
         <p class="quote-attribute">—Gary Friedman</p>
-    </div>
-    <div class="list-view">
-      <div class="list-view-items">
-        <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">collections</a>
-        <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">source books</a>
-        <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">galleries</a>
-        <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">restaurants</a>
-        <a href="" id="item-5" @mouseover="stopSlideImage(5)" @mouseleave="startSlideImage(5)">guesthouses</a>
-        <a href="" id="item-6" @mouseover="stopSlideImage(6)" @mouseleave="startSlideImage(6)">residences</a>
-        <a href="" id="item-7" @mouseover="stopSlideImage(7)" @mouseleave="startSlideImage(7)">design services</a>
-        <a href="" id="item-8" @mouseover="stopSlideImage(8)" @mouseleave="startSlideImage(8)">planes</a>
-        <a href="" id="item-9" @mouseover="stopSlideImage(9)" @mouseleave="startSlideImage(9)">yachts</a>
+      </div>
+      <div class="list-view">
+        <div class="list-view-items">
+          <a href="/design1" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">COLLECTIONS</a>
+          <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">SOURCE BOOKS</a>
+          <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">GALLERIES</a>
+          <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">RESTAURANTS</a>
+          <a href="" id="item-5" @mouseover="stopSlideImage(5)" @mouseleave="startSlideImage(5)">GUESTHOUSES</a>
+          <a href="" id="item-6" @mouseover="stopSlideImage(6)" @mouseleave="startSlideImage(6)">RESIDENCES</a>
+          <a href="" id="item-7" @mouseover="stopSlideImage(7)" @mouseleave="startSlideImage(7)">DESIGN SERVICES</a>
+          <a href="" id="item-8" @mouseover="stopSlideImage(8)" @mouseleave="startSlideImage(8)">PLANES</a><br>
+          <a href="" id="item-9" @mouseover="stopSlideImage(9)" @mouseleave="startSlideImage(9)">YACHTS</a>
+        </div>
       </div>
     </div>
-    <div class="image-view" id="bg"></div>
+    <div class="image-view">
+      <div id="image-item-1" style="opacity: 1">
+        <img src="/design6/06_bg_01.jpg" alt="">
+      </div>
+      <div id="image-item-2" style="opacity: 0">
+        <img src="/design6/06_bg_02.jpg" alt="">
+      </div>
+      <div id="image-item-3" style="opacity: 0">
+        <img src="/design6/06_bg_03.jpg" alt="">
+      </div>
+      <div id="image-item-4" style="opacity: 0">
+        <img src="/design6/06_bg_04.jpg" alt="">
+      </div>
+      <div id="image-item-5" style="opacity: 0">
+        <img src="/design6/06_bg_05.jpg" alt="">
+      </div>
+      <div id="image-item-6" style="opacity: 0">
+        <img src="/design6/06_bg_06.jpg" alt="">
+      </div>
+      <div id="image-item-7" style="opacity: 0">
+        <img src="/design6/06_bg_07.jpg" alt="">
+      </div>
+      <div id="image-item-8" style="opacity: 0">
+        <img src="/design6/06_bg_08.jpg" alt="">
+      </div>
+      <div id="image-item-9" style="opacity: 0">
+        <img src="/design6/06_bg_09.jpg" alt="">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,33 +59,30 @@ export default {
       i: 2,
       hideImageElement: {},
       hideItemElement: {},
-      showBg: {},
-      startSlideShowInterval: {},
+      showImageElement: {},
+      showItemElement: {},
       interval: null
     }
   },
   mounted() {
-    this.hideItemElement = document.getElementById('item-1')
-    this.showItemElement = document.getElementById('item-1')
-    this.showBg = document.getElementById('bg')
-    this.startSlideShowInterval = setInterval(this.startSlideShow, 1000)
+    this.interval = setInterval(this.slideshow, 4000)
   },
   methods: {
-    startSlideShow() {
-        clearInterval(this.startSlideShowInterval)
-        this.showBg.style.opacity = 1;
-        this.interval = setInterval(this.slideshow, 4000)
-    },
     slideshow() {
       if (this.i == 1) {
+        this.hideImageElement = document.getElementById('image-item-'+(this.i+8))
         this.hideItemElement = document.getElementById('item-'+(this.i+8))
+        this.showImageElement = document.getElementById('image-item-'+(this.i))
         this.showItemElement = document.getElementById('item-'+(this.i))
       } else {
+        this.hideImageElement = document.getElementById('image-item-'+(this.i-1))
         this.hideItemElement = document.getElementById('item-'+(this.i-1))
+        this.showImageElement = document.getElementById('image-item-'+(this.i))
         this.showItemElement = document.getElementById('item-'+(this.i))
       }
-      this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+this.i+'.jpg\')';
+      this.hideImageElement.style.opacity = 0
       this.hideItemElement.style.color = '#D5D5D5'
+      this.showImageElement.style.opacity = 1
       this.showItemElement.style.color = 'black'
       if (this.i == 9) {
         this.i = 1
@@ -66,18 +93,16 @@ export default {
 
     stopSlideImage(i) {
       clearInterval(this.interval)
+      this.showImageElement.style.opacity = 0
       this.showItemElement.style.color = '#D5D5D5'
-      this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+i+'.jpg\')'
       document.getElementById('item-'+i).style.color = 'black';
+      document.getElementById('image-item-'+i).style.opacity = 1;
     },
     startSlideImage(i) {
-      document.getElementById('item-'+i).style.color = '#D5D5D5'
+      document.getElementById('item-'+i).style.color = '#D5D5D5';
+      document.getElementById('image-item-'+i).style.opacity = 0;
+      this.showImageElement.style.opacity = 1
       this.showItemElement.style.color = 'black'
-      if (this.i == 1) {
-        this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+(this.i)+'.jpg\')';
-      } else {
-        this.showBg.style.backgroundImage = 'url(\'/design4/04_bg_'+(this.i-1)+'.jpg\')';
-      }
       this.interval = setInterval(this.slideshow, 4000)
     }
   }
@@ -90,65 +115,102 @@ export default {
 .container {
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  min-height: 100vh;
-  max-width: 1500px;
+  justify-content: space-between;
+  height: 665px;
+  padding: 0 0 0 5%;
 }
-.quote {
-    font-family: 'CaslonRH-Superfine';
-    font-size: 25.92pt;
-    line-height: 23pt;
-    letter-spacing: .02em;
-    text-transform: uppercase;
-    width: 705px;
-    padding-top: 200px;
-}
-#logo {
-    width: 100px;
-    padding-bottom: 40px;
-}
-.quote-attribute {
-    padding-top: 20px;
-    font-family: 'BaronSans-Thin', sans-serif;
-    font-size: 12pt;
-    line-height: 21.21pt;
-    letter-spacing: .05em;
-    text-align: right;
-}
+
 .list-view {
-    display: flex;
-    align-items: center;
-    font-family: 'BaronSans-Thin', sans-serif;
-    font-size: 12pt;
-    line-height: 22pt;
-    letter-spacing: .075em;
-    text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-size: 8pt;
+  line-height: 15pt;
 }
 .list-view div {
-  display: flex;
-  flex-direction: column;
+  width: 105px;
+  padding-top: 10%;
 }
+
 .list-view a {
   color: #D5D5D5;
 }
+
+.list-view a:hover {
+  color: #000;
+}
+
+#logo {
+   width: 75px;
+}
+
+.quote-copy {
+  padding-top: 15%;
+  font-family: 'CaslonRH-Superfine';
+  text-transform: uppercase;
+  font-size: 20.4pt;
+  line-height: 17.4pt;
+  width: 225px;
+}
+
+.quote-attribute {
+  padding-top: 5%;
+  font-family: 'BaronSans-Thin', sans-serif;
+  text-transform: uppercase;
+  font-size: 8pt;
+  line-height: 21.21pt;
+  letter-spacing: .15em;
+}
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25vw;
+}
+
 .image-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
-  top: 50px;
-  right: 50px;
-  width: 35vw;
-  height: 90vh;
-  transition: opacity 1.25s ease-in, background-image 1.25s ease-in;
-  -webkit-transition: opacity 1.25s ease-in, background-image 1.25s ease-in;
+  height: 100%;
+  right: 0;
+  width: 66vw;
 }
-#bg {
-    background-image: url('/design4/04_bg_1.jpg');
-    opacity: 0;
-    background-position: center;
-    background-size: cover;
+
+.image-view > div {
+  position: absolute;
+  transition: opacity 1.25s ease-in;
+  -webkit-transition: opacity 1.25s ease-in;
 }
+
 .list-view-items a {
   transition: color 750ms ease-in;
   -webkit-transition: color 750ms ease-in;
 }
+
+.list-view-items a {
+  position:relative;
+  transition: 0.5s;
+}
+
+.list-view-items a::before{
+  width: 0%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  bottom: -1px;
+  box-sizing: border-box;
+  transition: .5s;
+ }
+
+.list-view-items a:hover::before {
+  width: 100% !important;
+  transition: .5s;
+ }
+
+.list-view-items a::before {
+  border-bottom: 1px solid black;
+}
+
 </style>
