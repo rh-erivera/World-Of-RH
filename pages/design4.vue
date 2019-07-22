@@ -112,11 +112,11 @@ export default {
 <style>
 
 .container {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    height: 665px;
-    padding: 0 5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 665px;
+  padding: 0 5%;
 }
 
 .list-view {
@@ -129,21 +129,23 @@ export default {
   width: 105px;
   padding-top: 10%;
 }
+
 .list-view a {
   color: #D5D5D5;
 }
+
 .list-view a:hover {
   color: #000;
 }
 
 #logo {
-    width: 75px;
+   width: 75px;
 }
 .quote p {
-    padding-top: 5%;
-    font-family: 'BaronSans-UltraThin';
-    font-size: 12.5pt;
-    line-height: 15pt;
+  padding-top: 5%;
+  font-family: 'BaronSans-UltraThin';
+  font-size: 12.5pt;
+  line-height: 15pt;
 }
 
 .col-1 {
@@ -153,13 +155,13 @@ export default {
 }
 
 .image-view {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    height: 100%;
-    right: 5%;
-    width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  right: 5%;
+  width: 45vw;
 }
 
 .image-view > div {
@@ -174,28 +176,28 @@ export default {
 }
 
 .list-view-items a {
-    position:relative;
-    transition: 0.5s;
+  position:relative;
+  transition: 0.5s;
 }
 
 .list-view-items a::before{
-    width: 0%;
-    height:100%;
-    z-index: 3;
-    content:'';
-    position: absolute;
-    bottom: -1px;
-    box-sizing: border-box;
-    transition: .5s;
+  width: 0%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  bottom: -1px;
+  box-sizing: border-box;
+  transition: .5s;
  }
 
 .list-view-items a:hover::before {
-    width: 100% !important;
-    transition: .5s;
+  width: 100% !important;
+  transition: .5s;
  }
 
 .list-view-items a::before {
-    border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 </style>

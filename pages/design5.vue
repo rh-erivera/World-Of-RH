@@ -1,25 +1,26 @@
 <template>
     <div class="container">
-        <p class="copy">THE</p>
+        <p class="copy" style="height: 119px; margin-top: 40px;">THE</p>
         <div @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)">
             <p class="copy" id="link-1">PRODUCTS</p>
             <div class="links" id="links-1">
-                <a href="">COLLECTIONS / </a><a href="">SOURCEBOOKS / </a><a href="">DESIGN SERVICES</a>
+                <a href="">COLLECTIONS</a><span class="divider"> / </span><a href="">SOURCEBOOKS</a><span class="divider"> / </span><a href="">DESIGN SERVICES</a>
             </div>
         </div>
         <div @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">
             <p class="copy" id="link-2">PLACES &</p>
             <div class="links" id="links-2">
-                <a href="">GALLERIES / </a><a href="">RESTAURANTS / </a><a href="">RESIDENCES</a>
+                <a href="">GALLERIES</a><span class="divider"> / </span><a href="">RESTAURANTS</a><span class="divider"> / </span><a href="">RESIDENCES</a>
             </div>
         </div>
         <div @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">
             <p class="copy" id="link-3">SPACES OF</p>
             <div class="links" id="links-3"> 
-                <a href="">GUESTHOUSES / </a><a href="">PLANES / </a><a href="">YATCHS</a>
+                <a href="">GUESTHOUSES</a><span class="divider"> / </span><a href="">PLANES</a><span class="divider"> / </span><a href="">YATCHS</a>
             </div>
         </div>
         <img id="logo" src="/RH-Logo-Black.svg" alt="">
+        <img id="logo2" src="/RH-Logo-Grey.svg" alt="">
     </div>
 </template>
 
@@ -48,11 +49,12 @@ export default {
             clearInterval(this.startInterval)
             var copyItems = document.getElementsByClassName('copy')
             for (var i = 0; i < copyItems.length; i++) {
-                copyItems[i].style.color = '#999999';
+                copyItems[i].style.color = '#cccccc';
             }
-            document.getElementById('logo').src = '/RH-Logo-Grey.svg'
+            document.getElementById('logo').style.opacity = 0
             this.showItemElement.style.color = 'black';
-            this.showLinks.style.opacity = 1; 
+            this.showLinks.style.opacity = 1;
+            document.getElementById('logo2').style.opacity = 1
             this.rotateInterval = setInterval(this.rotate, 4000)
         },
         rotate() {
@@ -67,7 +69,7 @@ export default {
                 this.showItemElement = document.getElementById('link-'+(this.i))
                 this.showLinks = document.getElementById('links-'+(this.i))
             }
-            this.hideItemElement.style.color = '#999999'
+            this.hideItemElement.style.color = '#cccccc'
             this.hideLinks.style.opacity = 0
             this.showItemElement.style.color = 'black'
             this.showLinks.style.opacity = 1
@@ -79,13 +81,13 @@ export default {
         },
         stopSlideImage(i) {
             clearInterval(this.rotateInterval)
-            this.showItemElement.style.color = '#999999'
+            this.showItemElement.style.color = '#cccccc'
             this.showLinks.style.opacity = 0
             document.getElementById('link-'+i).style.color = 'black'
             document.getElementById('links-'+i).style.opacity = 1;
         },
         startSlideImage(i) {
-            document.getElementById('link-'+i).style.color = '#999999'
+            document.getElementById('link-'+i).style.color = '#cccccc'
             document.getElementById('links-'+i).style.opacity = 0;
             this.showItemElement.style.color = 'black'
             this.showLinks.style.opacity = 1
@@ -105,20 +107,26 @@ export default {
 
 <style>
 .container {
-    margin: 12px auto;
+    /* margin: 12px auto; */
+    height: 620px;
     text-align: center;
+    margin-top: 25px;
+    /* background-image: url('/design6.jpg'); */
+    background-size: cover;
+    background-position: center center;
 }
 .container p {
     font-family: 'CaslonRH-Superfine';
-    font-size: 118.12pt;
-    line-height: 135pt;
-    letter-spacing: .02em;
-    height: 170px;
+    font-size: 78.12pt;
+    line-height: 81pt;
+    /* letter-spacing: .02em; */
+    height: 95px;
     animation: fadeIn 2s ease-in;
 }
-.container a {
+.container a, 
+.divider {
     font-family: 'BaronSans-Thin';
-    font-size: 12pt;
+    font-size: 7pt;
     letter-spacing: .1em;
 }
 #links-1, #links-2, #links-3 {
@@ -150,13 +158,35 @@ export default {
     border-bottom: 1px solid black;
 }
 #logo {
-    width: 150px;
-    margin: 50px auto;
+    width: 115px;
+    margin: 26px auto 0;
     animation: fadeIn 2s ease-in;
-    transition: src 750ms ease-in;
+    transition: opacity 750ms ease-in;
+}
+#logo2 {
+    width: 115px;
+    opacity: 0;
+    position: absolute;
+    bottom: 49px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: opacity 750ms ease-in;
 }
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}
+}
+
+@media (min-width: 1025px) {
+    .container p {
+      height: 170px;
+      font-size: 118.12pt;
+      line-height: 135pt;
+    }
+    .container a {
+      font-size: 12pt; 
+    }
+
 }
 </style>
