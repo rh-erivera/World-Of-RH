@@ -159,7 +159,11 @@ export default {
 }
 #logo {
     width: 115px;
-    margin: 26px auto 0;
+    position: absolute;
+    bottom: 49px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     animation: fadeIn 2s ease-in;
     transition: opacity 750ms ease-in;
 }

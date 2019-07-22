@@ -1,10 +1,10 @@
 <template>
-    <div>
+    <div style="background-color: black;">
         <div class="nav-background-images" id="bg"></div>
         <div class="container">
             <div id="logo">
-                <img id="logo-img" src="/theWorldOfRH-Logo.svg" alt="">
-                <img id="logo-img-white" src="/theWorldOfRH-Logo-White.svg" alt="" style="opacity: 0">
+                <!-- <img id="logo-img" src="/theWorldOfRH-Logo.svg" alt=""> -->
+                <img id="logo-img" src="/theWorldOfRH-Logo-White.svg" alt="">
             </div>
             <div class="nav list-view-items">
                 <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)">collections</a>
@@ -46,9 +46,7 @@ export default {
             for (var i = 0; i < navItems.length; i++) {
                 navItems[i].style.color = '#999999';
             }
-            document.getElementById('logo-img').style.opacity = 0
             document.getElementById('item-1').style.color = 'white';
-            document.getElementById('logo-img-white').style.opacity = 1
             this.showBg.style.opacity = 1;
             this.interval = setInterval(this.slideshow, 4000)
         },
@@ -113,43 +111,11 @@ export default {
     font-size: 74.64pt;
     line-height: 55.4pt;
     letter-spacing: -.02em;
-    color: #333;
+    color: white;
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    /* overflow-y: hidden; */
 }
-#logo-img-white {
-    position: absolute;
-    width: 100px;
-    top: 42.5%;
-    transition: opacity 750ms ease-in;
-}
-/* .list-view-items a {
-    position:relative;
-    transition: 0.5s;
-}
-
-.list-view-items a::before{
-    width: 0%;
-    height:100%;
-    z-index: 3;
-    content:'';
-    position: absolute;
-    bottom: -1px;
-    box-sizing: border-box;
-    transition: .5s;
- }
-
-.list-view-items a:hover::before {
-    width: 100% !important;
-    transition: .5s;
- }
-
-.list-view-items a::before {
-    border-bottom: 1px solid white;
-} */
-
 .nav-background-images {
     position: absolute;
     z-index: 0;

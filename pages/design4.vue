@@ -7,7 +7,7 @@
       </div>
       <div class="list-view">
         <div class="list-view-items">
-          <a href="/design1" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">COLLECTIONS</a>
+          <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">COLLECTIONS</a>
           <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">SOURCE BOOKS</a>
           <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">GALLERIES</a>
           <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">RESTAURANTS</a>
@@ -64,6 +64,10 @@ export default {
     }
   },
   mounted() {
+    this.hideItemElement = document.getElementById('image-item-1')
+    this.showImageElement = document.getElementById('image-item-1')
+    this.hideItemElement = document.getElementById('item-1')
+    this.showItemElement = document.getElementById('item-1')
     this.interval = setInterval(this.slideshow, 4000)
   },
   methods: {
