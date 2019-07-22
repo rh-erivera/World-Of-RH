@@ -100,10 +100,7 @@ export default {
     startSlideImage(i) {
       document.getElementById('item-'+i).style.color = '#D5D5D5';
       document.getElementById('image-item-'+i).style.opacity = 0;
-      // this.i = i+1;
-      // this.showImageElement = document.getElementById('image-item-'+(this.i))
       this.showImageElement.style.opacity = 1
-      // this.showItemElement = document.getElementById('item-'+(this.i))
       this.showItemElement.style.color = 'black'
       this.interval = setInterval(this.slideshow, 4000)
     }
@@ -129,7 +126,7 @@ export default {
   line-height: 15pt;
 }
 .list-view div {
-  width: 100px;
+  width: 105px;
   padding-top: 10%;
 }
 .list-view a {
