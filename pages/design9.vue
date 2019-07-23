@@ -64,7 +64,7 @@ export default {
         },
         slideshow() {
             this.showBg.style.backgroundImage = 'url(\'/design9/09_bg_0'+this.i+'.jpg\')';
-            if (this.i == 9) {
+            if (this.i == 8) {
                 this.i = 1
             } else {
                 this.i++
@@ -170,6 +170,27 @@ export default {
     -webkit-transition: background-image 750ms ease-in, opacity 750ms ease-in;
 }
 
+.nav a {
+    transition: 0.5s;
+    border-bottom: transparent;
+}
+.nav a::before{
+    width: 0%;
+    height:100%;
+    z-index: 3;
+    content:'';
+    position: absolute;
+    bottom: -1px;
+    box-sizing: border-box;
+    transition: .5s;
+ }
+.nav a:hover::before {
+    width: 100% !important;
+    transition: .5s;
+ }
+.nav a::before {
+    border-bottom: 1px solid #333;
+}
 
 @keyframes fadeIn {
     0% {opacity: 0;}
