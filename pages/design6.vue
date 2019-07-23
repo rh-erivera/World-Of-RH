@@ -7,15 +7,15 @@
       </div>
       <div class="list-view">
         <div class="list-view-items">
-          <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">COLLECTIONS</a>
-          <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">SOURCE BOOKS</a>
-          <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">GALLERIES</a>
-          <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">RESTAURANTS</a>
-          <a href="" id="item-5" @mouseover="stopSlideImage(5)" @mouseleave="startSlideImage(5)">GUESTHOUSES</a>
-          <a href="" id="item-6" @mouseover="stopSlideImage(6)" @mouseleave="startSlideImage(6)">RESIDENCES</a>
-          <a href="" id="item-7" @mouseover="stopSlideImage(7)" @mouseleave="startSlideImage(7)">DESIGN SERVICES</a>
-          <a href="" id="item-8" @mouseover="stopSlideImage(8)" @mouseleave="startSlideImage(8)">PLANES</a><br>
-          <a href="" id="item-9" @mouseover="stopSlideImage(9)" @mouseleave="startSlideImage(9)">YACHTS</a>
+          <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">COLLECTIONS</a><span id="item-1-arrow"> &#8594;</span>
+          <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">SOURCE BOOKS</a><span id="item-2-arrow" style="opacity: 0"> &#8594;</span>
+          <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">GALLERIES</a><span id="item-3-arrow" style="opacity: 0"> &#8594;</span>
+          <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">RESTAURANTS</a><span id="item-4-arrow" style="opacity: 0"> &#8594;</span>
+          <a href="" id="item-5" @mouseover="stopSlideImage(5)" @mouseleave="startSlideImage(5)">GUESTHOUSES</a><span id="item-5-arrow" style="opacity: 0"> &#8594;</span>
+          <a href="" id="item-6" @mouseover="stopSlideImage(6)" @mouseleave="startSlideImage(6)">RESIDENCES</a><span id="item-6-arrow" style="opacity: 0"> &#8594;</span>
+          <a href="" id="item-7" @mouseover="stopSlideImage(7)" @mouseleave="startSlideImage(7)">DESIGN SERVICES</a><span id="item-7-arrow" style="opacity: 0"> &#8594;</span>
+          <a href="" id="item-8" @mouseover="stopSlideImage(8)" @mouseleave="startSlideImage(8)">PLANES</a><span id="item-8-arrow" style="opacity: 0"> &#8594;</span><br>
+          <a href="" id="item-9" @mouseover="stopSlideImage(9)" @mouseleave="startSlideImage(9)">YACHTS</a><span id="item-9-arrow" style="opacity: 0"> &#8594;</span>
         </div>
       </div>
     </div>
@@ -60,6 +60,8 @@ export default {
       hideItemElement: {},
       showImageElement: {},
       showItemElement: {},
+      showArrow: {},
+      hideArrow: {},
       interval: null
     }
   },
@@ -68,6 +70,8 @@ export default {
     this.showImageElement = document.getElementById('image-item-1')
     this.hideItemElement = document.getElementById('item-1')
     this.showItemElement = document.getElementById('item-1')
+    this.hideArrow = document.getElementById('item-1-arrow')
+    this.showArrow = document.getElementById('item-1-arrow')
     this.interval = setInterval(this.slideshow, 4000)
   },
   methods: {
@@ -75,18 +79,28 @@ export default {
       if (this.i == 1) {
         this.hideImageElement = document.getElementById('image-item-'+(this.i+8))
         this.hideItemElement = document.getElementById('item-'+(this.i+8))
+        this.hideArrow = document.getElementById('item-'+(this.i+8)+'-arrow')
+
         this.showImageElement = document.getElementById('image-item-'+(this.i))
         this.showItemElement = document.getElementById('item-'+(this.i))
+        this.showArrow = document.getElementById('item-'+(this.i)+'-arrow')
       } else {
         this.hideImageElement = document.getElementById('image-item-'+(this.i-1))
         this.hideItemElement = document.getElementById('item-'+(this.i-1))
+        this.hideArrow = document.getElementById('item-'+(this.i-1)+'-arrow')
+
         this.showImageElement = document.getElementById('image-item-'+(this.i))
         this.showItemElement = document.getElementById('item-'+(this.i))
+        this.showArrow = document.getElementById('item-'+(this.i)+'-arrow')
       }
       this.hideImageElement.style.opacity = 0
       this.hideItemElement.style.color = '#D5D5D5'
+      this.hideArrow.style.opacity = 0;
+
       this.showImageElement.style.opacity = 1
       this.showItemElement.style.color = 'black'
+      this.showArrow.style.opacity = 1;
+      
       if (this.i == 9) {
         this.i = 1
       } else {
@@ -98,14 +112,21 @@ export default {
       clearInterval(this.interval)
       this.showImageElement.style.opacity = 0
       this.showItemElement.style.color = '#D5D5D5'
-      document.getElementById('item-'+i).style.color = 'black';
-      document.getElementById('image-item-'+i).style.opacity = 1;
+      this.showArrow.style.opacity = 0
+
+      document.getElementById('item-'+i).style.color = 'black'
+      document.getElementById('image-item-'+i).style.opacity = 1
+      document.getElementById('item-'+i+'-arrow').style.opacity = 1
     },
     startSlideImage(i) {
-      document.getElementById('item-'+i).style.color = '#D5D5D5';
-      document.getElementById('image-item-'+i).style.opacity = 0;
+      document.getElementById('item-'+i).style.color = '#D5D5D5'
+      document.getElementById('image-item-'+i).style.opacity = 0
+      document.getElementById('item-'+i+'-arrow').style.opacity = 0
+
       this.showImageElement.style.opacity = 1
       this.showItemElement.style.color = 'black'
+      this.showArrow.style.opacity = 1
+
       this.interval = setInterval(this.slideshow, 4000)
     }
   }
@@ -131,7 +152,7 @@ export default {
   line-height: 15pt;
 }
 .list-view div {
-  width: 105px;
+  width: 115px;
   padding-top: 10%;
 }
 
@@ -178,6 +199,10 @@ export default {
 .list-view-items a {
   transition: color 750ms ease-in;
   -webkit-transition: color 750ms ease-in;
+}
+
+.list-view-items span {
+  transition: opacity 750ms ease-in;
 }
 
 .list-view-items a {

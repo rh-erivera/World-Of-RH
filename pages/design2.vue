@@ -57,11 +57,6 @@ export default {
         setInterval(this.slideshow, 4000)
     },
     methods: {
-        // startSlideShow() {
-        //     clearInterval(this.startSlideShowInterval)
-        //     this.showBg.style.opacity = 1;
-        //     setInterval(this.slideshow, 4000)
-        // },
         slideshow() {
             this.showBg.style.backgroundImage = 'url(\'/design9/09_bg_0'+this.i+'.jpg\')';
             if (this.i == 8) {
@@ -136,11 +131,11 @@ export default {
 }
 
 #shop-dropdown {
-    left: 75px;
+    left: 73px;
 }
 
 #galleries-dropdown {
-    left: 146px;
+    left: 144px;
 }
 
 

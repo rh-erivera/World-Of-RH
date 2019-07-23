@@ -3,7 +3,6 @@
         <div class="nav-background-images" id="bg"></div>
         <div class="container">
             <div id="logo">
-                <!-- <img id="logo-img" src="/theWorldOfRH-Logo.svg" alt=""> -->
                 <img id="logo-img" src="/theWorldOfRH-Logo-White.svg" alt="">
             </div>
             <div class="nav list-view-items">
@@ -97,9 +96,10 @@ export default {
     z-index: 1;
     animation: fadeIn 2s ease-in;
     width: 100px;
-    display: flex;
     margin-left: 50px;
     transition: opacity 750ms ease-in;
+    position: absolute;
+    top: 40%;
 }
 
 .nav {

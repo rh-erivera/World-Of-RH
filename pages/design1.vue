@@ -36,7 +36,7 @@ export default {
     },
     mounted() {
         this.showBg = document.getElementById('bg')
-        this.startSlideShowInterval = setInterval(this.startSlideShow, 4000)
+        this.startSlideShowInterval = setInterval(this.startSlideShow, 3000)
     },
     methods: {
         startSlideShow() {
