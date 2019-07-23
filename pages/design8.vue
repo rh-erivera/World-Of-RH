@@ -1,7 +1,7 @@
 <template>
     <div style="background-color: black;">
         <video class="nav-background-images" id="bg" autoplay muted loop>
-            <source src="01_Slide_02.mp4" type="video/mp4">
+            <source src="/03_Slide_02_1108x720.mp4" type="video/mp4">
         </video>
         <div class="container">
             <img id="logo" src="/theWorldOfRH-Logo-White.svg" alt="">
@@ -31,44 +31,17 @@
 
 <script>
 export default {
-    data() {
-        return {
-            // i: 2,
-            // showBg: {},
-            // startSlideShowInterval: {}
-        }
-    },
     mounted() {
-        // this.showBg = document.getElementById('bg')
         setInterval(function() {
             document.getElementById('bg').style.opacity = 1;
-        }, 4000)
+        }, 4000);
     }
-    // methods: {
-    //     startSlideShow() {
-    //         clearInterval(this.startSlideShowInterval)
-    //         this.showBg.style.opacity = 1;
-    //         setInterval(this.slideshow, 4000)
-    //     },
-    //     slideshow() {
-    //         this.showBg.style.backgroundImage = 'url(\'/design2/02_bg_'+this.i+'.jpg\')';
-    //         if (this.i == 9) {
-    //             this.i = 1
-    //         } else {
-    //             this.i++
-    //         }
-    //     }
-    // }
 }
 </script>
 
 <style>
 .container {
     height: 665px;
-    /* margin: 0 auto;
-    max-width: 1552px; */
-    /* display: flex;
-    align-items: center; */
     animation: fadeIn 2s ease-in;
     color: #fff;
 }
@@ -110,25 +83,6 @@ export default {
     letter-spacing: .07em;
 }
 
-/* .nav {
-    animation: fadeIn 2s ease-in;
-    padding: 60px 11.5% 0;
-    z-index: 1;
-    font-family: 'BaronSans-UltraThin', sans-serif;
-    text-transform: uppercase;
-    font-size: 12pt;
-    line-height: 18pt;
-    letter-spacing: .02em;
-    text-align: justify;
-    text-align-last: center;
-    color: white;
-}
-.nav a {
-    font-family: 'CaslonRH-ThinItalic', sans-serif;
-    font-size: 18pt;
-    line-height: 18pt; 
-}*/
-
 .nav-background-images {
     position: absolute;
     top: 0;
@@ -136,14 +90,10 @@ export default {
     width: 100vw;
     height: 100%;
     filter:opacity(50%);
-    /* background-image: url('/design2/02_bg_1.jpg'); */
     opacity: 0;
-    /* background-position: center;
-    background-size: cover; */
     transition: background-image 750ms ease-in, opacity 750ms ease-in;
     -webkit-transition: background-image 750ms ease-in, opacity 750ms ease-in;
 }
-
 
 @keyframes fadeIn {
     0% {opacity: 0;}

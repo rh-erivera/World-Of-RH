@@ -53,6 +53,16 @@ export default {
       { rel: 'preload', href: '/design6/06_bg_08.jpg', as: 'image'},
       { rel: 'preload', href: '/design6/06_bg_09.jpg', as: 'image'},
 
+      { rel: 'preload', href: '/design9/09_bg_01.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_02.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_03.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_04.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_05.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_06.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_07.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_08.jpg', as: 'image'},
+      { rel: 'preload', href: '/design9/09_bg_09.jpg', as: 'image'},
+
       { rel: 'preload', href: '/RH-Logo-Black.svg', as: 'image'},
       { rel: 'preload', href: '/RH-Logo-Grey.svg', as: 'image'},
       { rel: 'preload', href: '/RH-logo.svg', as: 'image'},

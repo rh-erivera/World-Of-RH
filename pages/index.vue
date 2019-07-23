@@ -10,6 +10,7 @@
       <a href="/design6">Design 6</a>
       <a href="/design7">Design 7</a>
       <a href="/design8">Design 8</a>
+      <a href="/design9">Design 9</a>
       <!-- <a href="/slideshow">Slideshow</a>     -->
     </div>
   </div>

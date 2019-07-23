@@ -35,14 +35,12 @@ export default {
     data() {
         return {
             i: 2,
-            showBg: {},
+            showBg: {}
         }
     },
     mounted() {
-        this.hideItemElement = document.getElementById('item-1')
-        this.showItemElement = document.getElementById('item-1')
         this.showBg = document.getElementById('bg')
-        this.startSlideShowInterval = setInterval(this.slideshow, 4000)
+        setInterval(this.slideshow, 4000)
     },
     methods: {
         slideshow() {
