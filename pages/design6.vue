@@ -3,8 +3,7 @@
     <div class="col-1">
       <div class="quote">
         <img id="logo" src="/RH-Logo-Black.svg" alt="">
-        <p class="quote-copy" >“this is not just a business that sells furniture.<br> it's a platform to change<br> the world.”</p>
-        <p class="quote-attribute">—Gary Friedman</p>
+        <p class="">DISCOVER THE WORLD OF RH</p>
       </div>
       <div class="list-view">
         <div class="list-view-items">
@@ -22,31 +21,31 @@
     </div>
     <div class="image-view">
       <div id="image-item-1" style="opacity: 1">
-        <img src="/design6/06_bg_01.jpg" alt="">
+        <img src="/design4/04_bg_1.jpg" alt="">
       </div>
       <div id="image-item-2" style="opacity: 0">
-        <img src="/design6/06_bg_02.jpg" alt="">
+        <img src="/design4/04_bg_2.jpg" alt="">
       </div>
       <div id="image-item-3" style="opacity: 0">
-        <img src="/design6/06_bg_03.jpg" alt="">
+        <img src="/design4/04_bg_3.jpg" alt="">
       </div>
       <div id="image-item-4" style="opacity: 0">
-        <img src="/design6/06_bg_04.jpg" alt="">
+        <img src="/design4/04_bg_4.jpg" alt="">
       </div>
       <div id="image-item-5" style="opacity: 0">
-        <img src="/design6/06_bg_05.jpg" alt="">
+        <img src="/design4/04_bg_5.jpg" alt="">
       </div>
       <div id="image-item-6" style="opacity: 0">
-        <img src="/design6/06_bg_06.jpg" alt="">
+        <img src="/design4/04_bg_6.jpg" alt="">
       </div>
       <div id="image-item-7" style="opacity: 0">
-        <img src="/design6/06_bg_07.jpg" alt="">
+        <img src="/design4/04_bg_7.jpg" alt="">
       </div>
       <div id="image-item-8" style="opacity: 0">
-        <img src="/design6/06_bg_08.jpg" alt="">
+        <img src="/design4/04_bg_8.jpg" alt="">
       </div>
       <div id="image-item-9" style="opacity: 0">
-        <img src="/design6/06_bg_09.jpg" alt="">
+        <img src="/design4/04_bg_9.jpg" alt="">
       </div>
     </div>
   </div>
@@ -121,7 +120,8 @@ export default {
   display: flex;
   justify-content: space-between;
   height: 665px;
-  padding: 0 0 0 5%;
+  padding: 0 5%;
+  animation: fadeIn 2s ease-in;
 }
 
 .list-view {
@@ -146,29 +146,17 @@ export default {
 #logo {
    width: 75px;
 }
-
-.quote-copy {
-  padding-top: 15%;
-  font-family: 'CaslonRH-Superfine';
-  text-transform: uppercase;
-  font-size: 20.4pt;
-  line-height: 17.4pt;
-  width: 225px;
-}
-
-.quote-attribute {
+.quote p {
   padding-top: 5%;
-  font-family: 'BaronSans-Thin', sans-serif;
-  text-transform: uppercase;
-  font-size: 8pt;
-  line-height: 21.21pt;
-  letter-spacing: .15em;
+  font-family: 'BaronSans-UltraThin';
+  font-size: 12.5pt;
+  line-height: 15pt;
 }
+
 .col-1 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 25vw;
+  justify-content: center;
 }
 
 .image-view {
@@ -177,8 +165,8 @@ export default {
   justify-content: center;
   position: absolute;
   height: 100%;
-  right: 0;
-  width: 66.75vw;
+  right: 5%;
+  width: 45vw;
 }
 
 .image-view > div {
@@ -216,5 +204,12 @@ export default {
 .list-view-items a::before {
   border-bottom: 1px solid black;
 }
-
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 </style>

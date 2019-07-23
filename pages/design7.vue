@@ -1,167 +1,221 @@
 <template>
-    <div>
-        <div class="nav-background-images" id="bg"></div>
-        <div class="container">
-            <div class="nav">
-                <p class="shop" @mouseover="showShop" @mouseleave="hideShop">SHOP</p>
-                <img id="logo" src="/theWorldOfRH-Logo.svg" alt="">
-                <p class="explore" @mouseover="showExplore" @mouseleave="hideExplore">EXPLORE</p>
-            </div>
-            <div id="shop-dropdown" class="nav-links shop-dropdown" @mouseover="showShop" @mouseleave="hideShop">
-                <a href="">RH INTERIORS</a><br>
-                <a href="">RH MODERN</a><br>
-                <a href="">RH BABY & CHILD</a><br>
-                <a href="">RH TEEN</a><br>
-                <a href="">RH BEACH HOUSE</a><br>
-                <a href="">RH SKI HOUSE</a><br>
-                <a href="">SOURCEBOOKS</a>
-            </div>
-            <div id="explore-dropdown" class="nav-links explore-dropdown" @mouseover="showExplore" @mouseleave="hideExplore">
-                <a href="">GALLERIES</a><br>
-                <a href="">RESTAURANTS</a><br>
-                <a href="">RESTAURANTS</a><br>
-                <a href="">RESIDENCES</a><br>
-                <a href="">GUEST HOUSES</a><br>
-                <a href="">PLANES</a><br>
-                <a href="">YATCHS</a><br>
-                <a href="">DESIGN SERVICES</a>
-            </div>
+  <div class="container">
+    <div class="col-1">
+      <div class="quote">
+        <img id="logo" src="/RH-Logo-Black.svg" alt="">
+        <p class="quote-copy" >“this is not just a business that sells furniture.<br> it's a platform to change<br> the world.”</p>
+        <p class="quote-attribute">—Gary Friedman</p>
+      </div>
+      <div class="list-view">
+        <div class="list-view-items">
+          <a href="" id="item-1" @mouseover="stopSlideImage(1)" @mouseleave="startSlideImage(1)" style="color: black;">COLLECTIONS</a>
+          <a href="" id="item-2" @mouseover="stopSlideImage(2)" @mouseleave="startSlideImage(2)">SOURCE BOOKS</a>
+          <a href="" id="item-3" @mouseover="stopSlideImage(3)" @mouseleave="startSlideImage(3)">GALLERIES</a>
+          <a href="" id="item-4" @mouseover="stopSlideImage(4)" @mouseleave="startSlideImage(4)">RESTAURANTS</a>
+          <a href="" id="item-5" @mouseover="stopSlideImage(5)" @mouseleave="startSlideImage(5)">GUESTHOUSES</a>
+          <a href="" id="item-6" @mouseover="stopSlideImage(6)" @mouseleave="startSlideImage(6)">RESIDENCES</a>
+          <a href="" id="item-7" @mouseover="stopSlideImage(7)" @mouseleave="startSlideImage(7)">DESIGN SERVICES</a>
+          <a href="" id="item-8" @mouseover="stopSlideImage(8)" @mouseleave="startSlideImage(8)">PLANES</a><br>
+          <a href="" id="item-9" @mouseover="stopSlideImage(9)" @mouseleave="startSlideImage(9)">YACHTS</a>
         </div>
+      </div>
     </div>
+    <div class="image-view">
+      <div id="image-item-1" style="opacity: 1">
+        <img src="/design6/06_bg_01.jpg" alt="">
+      </div>
+      <div id="image-item-2" style="opacity: 0">
+        <img src="/design6/06_bg_02.jpg" alt="">
+      </div>
+      <div id="image-item-3" style="opacity: 0">
+        <img src="/design6/06_bg_03.jpg" alt="">
+      </div>
+      <div id="image-item-4" style="opacity: 0">
+        <img src="/design6/06_bg_04.jpg" alt="">
+      </div>
+      <div id="image-item-5" style="opacity: 0">
+        <img src="/design6/06_bg_05.jpg" alt="">
+      </div>
+      <div id="image-item-6" style="opacity: 0">
+        <img src="/design6/06_bg_06.jpg" alt="">
+      </div>
+      <div id="image-item-7" style="opacity: 0">
+        <img src="/design6/06_bg_07.jpg" alt="">
+      </div>
+      <div id="image-item-8" style="opacity: 0">
+        <img src="/design6/06_bg_08.jpg" alt="">
+      </div>
+      <div id="image-item-9" style="opacity: 0">
+        <img src="/design6/06_bg_09.jpg" alt="">
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            i: 2,
-            showBg: {}
-        }
+  data() {
+    return {
+      i: 2,
+      hideImageElement: {},
+      hideItemElement: {},
+      showImageElement: {},
+      showItemElement: {},
+      interval: null
+    }
+  },
+  mounted() {
+    this.hideItemElement = document.getElementById('image-item-1')
+    this.showImageElement = document.getElementById('image-item-1')
+    this.hideItemElement = document.getElementById('item-1')
+    this.showItemElement = document.getElementById('item-1')
+    this.interval = setInterval(this.slideshow, 4000)
+  },
+  methods: {
+    slideshow() {
+      if (this.i == 1) {
+        this.hideImageElement = document.getElementById('image-item-'+(this.i+8))
+        this.hideItemElement = document.getElementById('item-'+(this.i+8))
+        this.showImageElement = document.getElementById('image-item-'+(this.i))
+        this.showItemElement = document.getElementById('item-'+(this.i))
+      } else {
+        this.hideImageElement = document.getElementById('image-item-'+(this.i-1))
+        this.hideItemElement = document.getElementById('item-'+(this.i-1))
+        this.showImageElement = document.getElementById('image-item-'+(this.i))
+        this.showItemElement = document.getElementById('item-'+(this.i))
+      }
+      this.hideImageElement.style.opacity = 0
+      this.hideItemElement.style.color = '#D5D5D5'
+      this.showImageElement.style.opacity = 1
+      this.showItemElement.style.color = 'black'
+      if (this.i == 9) {
+        this.i = 1
+      } else {
+        this.i++
+      }
     },
-    mounted() {
-        this.showBg = document.getElementById('bg')
-        setInterval(this.slideshow, 4000)
+
+    stopSlideImage(i) {
+      clearInterval(this.interval)
+      this.showImageElement.style.opacity = 0
+      this.showItemElement.style.color = '#D5D5D5'
+      document.getElementById('item-'+i).style.color = 'black';
+      document.getElementById('image-item-'+i).style.opacity = 1;
     },
-    methods: {
-        slideshow() {
-            this.showBg.style.backgroundImage = 'url(\'/design1/01_bg_'+this.i+'.jpg\')';
-            if (this.i == 9) {
-                this.i = 1
-            } else {
-                this.i++
-            }
-        },
-        showShop() {
-            document.getElementById('shop-dropdown').style.opacity = 1;
-        },
-        hideShop() {
-            document.getElementById('shop-dropdown').style.opacity = 0;
-        },
-        showExplore() {
-            document.getElementById('explore-dropdown').style.opacity = 1;
-        },
-        hideExplore() {
-            document.getElementById('explore-dropdown').style.opacity = 0;
-        }
+    startSlideImage(i) {
+      document.getElementById('item-'+i).style.color = '#D5D5D5';
+      document.getElementById('image-item-'+i).style.opacity = 0;
+      this.showImageElement.style.opacity = 1
+      this.showItemElement.style.color = 'black'
+      this.interval = setInterval(this.slideshow, 4000)
+    }
   }
 }
 </script>
 
+
 <style>
+
 .container {
-    height: 665px;
-    margin: 0 auto;
-    max-width: 1490px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 665px;
+  padding: 0 0 0 5%;
+  animation: fadeIn 2s ease-in;
 }
 
-.nav {
-    font-family: 'CaslonRH-Superfine', sans-serif;
-    font-size: 18pt;
-    line-height: 24pt;
-    letter-spacing: .04em;
-    color: #333;
-    animation: fadeIn 2s ease-in;
+.list-view {
+  display: flex;
+  align-items: center;
+  font-size: 8pt;
+  line-height: 15pt;
+}
+.list-view div {
+  width: 105px;
+  padding-top: 10%;
+}
+
+.list-view a {
+  color: #D5D5D5;
+}
+
+.list-view a:hover {
+  color: #000;
 }
 
 #logo {
-    width: 85px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 41.5%;
-    margin: auto;
+   width: 75px;
 }
 
-.shop {
-    position: absolute;
-    left: 20%;
-    top: 46%;
+.quote-copy {
+  padding-top: 15%;
+  font-family: 'CaslonRH-Superfine';
+  text-transform: uppercase;
+  font-size: 20.4pt;
+  line-height: 17.4pt;
+  width: 225px;
 }
 
-.explore {
-    position: absolute;
-    right: 20%;
-    top: 46%;
+.quote-attribute {
+  padding-top: 5%;
+  font-family: 'BaronSans-Thin', sans-serif;
+  text-transform: uppercase;
+  font-size: 8pt;
+  line-height: 21.21pt;
+  letter-spacing: .15em;
+}
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25vw;
 }
 
-.nav-links {
-    font-family: 'BaronSans-Thin', sans-serif;
-    font-size: 9pt;
-    line-height: 18pt;
-    letter-spacing: .07em;
-    color: #333;
+.image-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  width: 66.75vw;
 }
-.shop-dropdown {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 750ms ease-in;
-    left: 20%;
-    top: 52.5%;
+
+.image-view > div {
+  position: absolute;
+  transition: opacity 1.25s ease-in;
+  -webkit-transition: opacity 1.25s ease-in;
 }
-.explore-dropdown {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 750ms ease-in;
-    right: 20%;
-    top: 52.5%;
+
+.list-view-items a {
+  transition: color 750ms ease-in;
+  -webkit-transition: color 750ms ease-in;
 }
-.nav p {
-    /* position:relative; */
-    transition: 0.5s;
-    border-bottom: transparent;
+
+.list-view-items a {
+  position:relative;
+  transition: 0.5s;
 }
-.nav p::before{
-    width: 0%;
-    height:100%;
-    z-index: 3;
-    content:'';
-    position: absolute;
-    bottom: -1px;
-    box-sizing: border-box;
-    transition: .5s;
+
+.list-view-items a::before{
+  width: 0%;
+  height:100%;
+  z-index: 3;
+  content:'';
+  position: absolute;
+  bottom: -1px;
+  box-sizing: border-box;
+  transition: .5s;
  }
-.nav p:hover::before {
-    width: 100% !important;
-    transition: .5s;
+
+.list-view-items a:hover::before {
+  width: 100% !important;
+  transition: .5s;
  }
-.nav p::before {
-    border-bottom: 1px solid #333;
-}
-.nav-background-images {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background-image: url('/design1/01_bg_1.jpg');
-    background-position: center;
-    background-size: cover;
-    animation: fadeIn 2s ease-in;
-    transition: background-image 750ms ease-in, opacity 750ms ease-in;
-    -webkit-transition: background-image 750ms ease-in, opacity 750ms ease-in;
+
+.list-view-items a::before {
+  border-bottom: 1px solid black;
 }
 @keyframes fadeIn {
     0% {opacity: 0;}
