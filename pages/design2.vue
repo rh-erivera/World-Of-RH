@@ -136,11 +136,11 @@ export default {
 }
 
 #shop-dropdown {
-    left: 78px;
+    left: 75px;
 }
 
 #galleries-dropdown {
-    left: 149px;
+    left: 146px;
 }
 
 
