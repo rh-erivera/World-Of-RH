@@ -62,6 +62,7 @@ export default {
       { rel: 'preload', href: '/design9/09_bg_07.jpg', as: 'image'},
       { rel: 'preload', href: '/design9/09_bg_08.jpg', as: 'image'},
 
+      { rel: 'preload', href: '/03_Slide_02_1108x720', as: 'video'},
       { rel: 'preload', href: '/RH-Logo-Black.svg', as: 'image'},
       { rel: 'preload', href: '/RH-Logo-Grey.svg', as: 'image'},
       { rel: 'preload', href: '/RH-logo.svg', as: 'image'},

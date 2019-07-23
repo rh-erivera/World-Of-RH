@@ -49,19 +49,19 @@ export default {
         return {
             i: 2,
             showBg: {},
-            startSlideShowInterval: {}
+            // startSlideShowInterval: {}
         }
     },
     mounted() {
         this.showBg = document.getElementById('bg')
-        this.startSlideShowInterval = setInterval(this.startSlideShow, 4000)
+        setInterval(this.slideshow, 4000)
     },
     methods: {
-        startSlideShow() {
-            clearInterval(this.startSlideShowInterval)
-            this.showBg.style.opacity = 1;
-            setInterval(this.slideshow, 4000)
-        },
+        // startSlideShow() {
+        //     clearInterval(this.startSlideShowInterval)
+        //     this.showBg.style.opacity = 1;
+        //     setInterval(this.slideshow, 4000)
+        // },
         slideshow() {
             this.showBg.style.backgroundImage = 'url(\'/design9/09_bg_0'+this.i+'.jpg\')';
             if (this.i == 8) {
@@ -108,6 +108,7 @@ export default {
 .nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100px;
     padding: 0 20px;
 }
@@ -116,11 +117,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 12px;
     font-size: 7.2pt;
     line-height: 21.6pt;
     letter-spacing: .1em;
     font-family: 'BaronSans-Thin', sans-serif;
-    padding: 0 20px;
+    margin: 0 20px;
 }
 
 #shop-dropdown, #galleries-dropdown {
@@ -147,7 +149,7 @@ export default {
     text-transform: uppercase;
     bottom: 40px;
     font-family: 'CaslonRH-Superfine';
-    font-size: 39.6pt;
+    font-size: 37.6pt;
     line-height: 31.8pt;
     left: 0;
     right: 0;
@@ -162,7 +164,8 @@ export default {
     left: 0;
     width: 100vw;
     height: 565px;
-    opacity: 0;
+    /* opacity: 0; */
+    animation: fadeIn 2s ease-in;
     background-image: url('/design9/09_bg_01.jpg');
     background-position: center;
     background-size: cover;
@@ -173,6 +176,7 @@ export default {
 .nav a {
     transition: 0.5s;
     border-bottom: transparent;
+    position: relative;
 }
 .nav a::before{
     width: 0%;
