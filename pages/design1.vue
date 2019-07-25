@@ -97,7 +97,7 @@ export default {
     text-align: justify;
     text-align-last: center;
     color: white;
-    width: 785px;
+    width: 780px;
 }
 .nav a {
     font-family: 'CaslonRH-ThinItalic', sans-serif;

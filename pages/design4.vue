@@ -107,13 +107,10 @@ export default {
 
 <style>
 .container {
-    /* margin: 12px auto; */
     height: 620px;
     text-align: center;
     margin-top: 25px;
-    /* background-image: url('/design6.jpg'); */
-    background-size: cover;
-    background-position: center center;
+    position: relative;
 }
 .container p {
     font-family: 'CaslonRH-Superfine';
@@ -181,16 +178,4 @@ export default {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-
-/* @media (min-width: 1025px) {
-    .container p {
-      height: 170px;
-      font-size: 118.12pt;
-      line-height: 135pt;
-    }
-    .container a {
-      font-size: 12pt; 
-    }
-
-} */
 </style>

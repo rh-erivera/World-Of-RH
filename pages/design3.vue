@@ -41,7 +41,7 @@ export default {
 
 <style>
 .container {
-    height: 665px;
+    height: 100vh;
     animation: fadeIn 2s ease-in;
     color: #fff;
 }

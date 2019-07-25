@@ -91,7 +91,7 @@ export default {
 
 <style>
 .container {
-    height: 665px;
+    height: 100vh;
     animation: fadeIn 2s ease-in;
     color: #333;
 }
@@ -158,7 +158,7 @@ export default {
     top: 100px;
     left: 0;
     width: 100vw;
-    height: 565px;
+    height: 100%;
     /* opacity: 0; */
     animation: fadeIn 2s ease-in;
     background-image: url('/design9/09_bg_01.jpg');

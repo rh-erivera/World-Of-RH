@@ -94,9 +94,8 @@ export default {
 
 <style>
 .container {
-    height: 665px;
+    height: 100vh;
     margin: 0 auto;
-    max-width: 1490px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -105,9 +104,8 @@ export default {
     animation: fadeInOut 10s ease-in-out;
     opacity: 0;
     position: absolute;
-    max-width: 1490px;
     bottom: 38%;
-    padding: 0 12%;
+    width: 765px;
 }
 .RH-Caslon {
     color: #333333;
@@ -144,7 +142,7 @@ export default {
     opacity: 0;
     text-align: center;
     width: 150px;
-    padding-bottom: 11%;
+    padding-bottom: 15%;
     z-index: 1;
 }
 .nav a {
@@ -195,24 +193,6 @@ export default {
   transition: color 750ms ease-in, border-bottom 750ms ease-in;
   -webkit-transition: color 750ms ease-in, border-bottom 750ms ease-in;
 }
-
-/* @media (min-width: 1025px) {
-    .RH-Caslon {
-        font-size: 55pt;
-        line-height: 45pt;    
-    }
-    .Baron-Sans {
-        font-size: 20pt;
-        line-height: 45pt;
-    }
-    .nav {
-        width: 275px;
-    }
-    .nav a {
-        font-size: 20pt;
-        line-height: 48pt;
-    }
-} */
 
 @keyframes fadeInOut {
     0% {opacity: 0;}
