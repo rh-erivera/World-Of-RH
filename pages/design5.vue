@@ -91,6 +91,7 @@ export default {
     height: 100vh;
     display: flex;
     align-items: center;
+    overflow-y: hidden;
 }
 #logo {
     z-index: 1;
