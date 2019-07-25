@@ -70,11 +70,11 @@ export default {
 
 <style>
 .container {
-    height: 665px;
+    height: 100vh;
     margin: 0 auto;
-    max-width: 1552px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 #logo {
     animation: fadeIn 2s ease-in;
@@ -88,7 +88,6 @@ export default {
 
 .nav {
     animation: fadeIn 2s ease-in;
-    padding: 60px 11.5% 0;
     z-index: 1;
     font-family: 'BaronSans-UltraThin', sans-serif;
     text-transform: uppercase;
@@ -98,6 +97,7 @@ export default {
     text-align: justify;
     text-align-last: center;
     color: white;
+    width: 785px;
 }
 .nav a {
     font-family: 'CaslonRH-ThinItalic', sans-serif;
@@ -147,17 +147,6 @@ export default {
 .list-view-items a::before {
     border-bottom: 1px solid #FFFFFF;
 }
-
-/* @media (min-width: 1025px){
-    .nav {
-        font-size: 24pt;
-        line-height: 36pt;
-    }
-    .nav a {
-        font-size: 36pt;
-        line-height: 36pt;
-    }
-}; */
 
 @keyframes fadeIn {
     0% {opacity: 0;}
