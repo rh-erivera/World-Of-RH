@@ -196,7 +196,7 @@ export default {
   -webkit-transition: color 750ms ease-in, border-bottom 750ms ease-in;
 }
 
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
     .RH-Caslon {
         font-size: 55pt;
         line-height: 45pt;    
@@ -212,7 +212,7 @@ export default {
         font-size: 20pt;
         line-height: 48pt;
     }
-}
+} */
 
 @keyframes fadeInOut {
     0% {opacity: 0;}

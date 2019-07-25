@@ -134,12 +134,12 @@ export default {
   transition: color 750ms ease-in;
   -webkit-transition: color 750ms ease-in;
 }
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
     .nav {
         font-size: 123.64pt;
         line-height: 89.92pt;
     }
-}
+} */
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1;}

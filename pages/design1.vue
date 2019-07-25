@@ -148,7 +148,7 @@ export default {
     border-bottom: 1px solid #FFFFFF;
 }
 
-@media (min-width: 1025px){
+/* @media (min-width: 1025px){
     .nav {
         font-size: 24pt;
         line-height: 36pt;
@@ -157,7 +157,7 @@ export default {
         font-size: 36pt;
         line-height: 36pt;
     }
-};
+}; */
 
 @keyframes fadeIn {
     0% {opacity: 0;}

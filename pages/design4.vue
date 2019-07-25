@@ -182,7 +182,7 @@ export default {
     100% {opacity: 1;}
 }
 
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
     .container p {
       height: 170px;
       font-size: 118.12pt;
@@ -192,5 +192,5 @@ export default {
       font-size: 12pt; 
     }
 
-}
+} */
 </style>
